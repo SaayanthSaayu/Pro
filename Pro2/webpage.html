@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        /* grid-template-rows: 100px 200px; */
+        gap: 5px;
+        grid-template-areas:
+          "header header header"
+          "sidebar main main";
+      }
+
+      .header {
+        grid-area: header;
+        background-color: wheat;
+        text-align: right;
+      }
+
+      .logo img {
+        float: left;
+        width: 100px;
+        height: 55px;
+        padding: 10px;
+      }
+
+      .navbar {
+        position: absolute;
+        top: 10px;
+        margin-right: 30px;
+        left: 75%;
+      }
+
+      .item {
+        margin: 10px;
+        list-style: none;
+        margin-right: 5px;
+        font-size: 20px;
+        padding: 3px;
+        transition: all 0.5s ease;
+      }
+
+      .item:hover {
+        color: white;
+        background-color: grey;
+        border-radius: 3px;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: white;
+        position: sticky;
+        top: 0%;
+        height: 100vh;
+        z-index: 1;
+      }
+
+      .side {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .sidebar .side {
+        border: 2px solid white;
+        margin: 10px;
+        height: 100vh;
+        background-color: rgb(238, 225, 225);
+      }
+
+      .side p {
+        text-align: center;
+      }
+      .sidepara {
+        text-align: center;
+        font-weight: 900;
+      }
+
+      .subpara {
+        text-align: center;
+      }
+
+      .sidebutton {
+        background-color: #4caf50;
+        margin-left: 120px;
+        font-size: 15px;
+        height: 40px;
+        padding: 5px;
+        box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+      }
+
+      .sidebutton:hover {
+        border-radius: 10px;
+      }
+
+      .about {
+        border: 2px solid white;
+        margin: 10px;
+        background-color: wheat;
+      }
+
+      .about p {
+        text-align: left;
+        margin-left: 10px;
+      }
+
+      .about .head {
+        text-transform: capitalize;
+        font-weight: bold;
+        padding: 5px;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .main {
+        grid-area: main;
+        background-color: rgb(216, 148, 148);
+      }
+
+      .food-img {
+        height: 200px;
+        margin: 10px;
+        margin-left: 150px;
+      }
+
+      .food-img .foodpic {
+        height: 189px;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 30px;
+        letter-spacing: 3px;
+      }
+
+      .food-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 30px;
+      }
+
+      .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+        top: 25%;
+        left: 10px;
+      }
+
+      .circle img {
+        float: left;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .description {
+        position: relative;
+        left: 125px;
+
+        width: 400px;
+      }
+
+      .description h2 {
+        text-align: left;
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        <div class="logo">
+          <img src="./img/creed.jpeg" alt="!!!..." />
+        </div>
+
+        <h1>Food Express</h1>
+        <nav class="navbar">
+          <ul>
+            <l1 class="item">Home</l1>
+            <l1 class="item">About</l1>
+            <l1 class="item">Menu</l1>
+            <l1 class="item">Contact</l1>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar">
+        <div class="side">
+          <p>
+            Hi there are you looking for something to eat !!!! , then u are in
+            the right place
+          </p>
+
+          <p class="sidepara">EAT RIGHT FOOD</p>
+          <p class="subpara">Eat healthy food it is greater for your health</p>
+          <button class="sidebutton">Category</button>
+
+          <div class="about">
+            <p>About us</p>
+
+            <p class="head">We've been making healthy food for last 10 years</p>
+
+            <p style="padding: 5px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus laudantium soluta nam, quidem ullam corrupti vero
+              molestiae delectus! Voluptas quaerat aperiam iure fuga iusto
+              consequatur expedita velit! Sint possimus libero laboriosam,
+              molestias eveniet eligendi dolores perferendis minima harum
+              officia temporibus, inventore voluptate unde neque et provident
+              iusto dolore enim cum deleniti adipisci ad? Veritatis deserunt
+              voluptate provident incidunt ipsa iusto eos accusamus eum
+              similique distinctio porro dicta possimus, reiciendis maiores?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <h2>Types Of Food</h2>
+
+        <div class="food-img">
+          <img src="./img/food1.jpeg" alt="" class="foodpic" />
+          <img src="./img/food2.jpeg" alt="" class="foodpic" />
+          <img src="./img/food3.jpeg" alt="" class="foodpic" />
+        </div>
+
+        <h2>Food Menu</h2>
+
+        <div class="food-menu">
+          <div class="menuitem">
+            <div class="circle">
+              <img src="./img/food4.jpeg" alt="" class="foodmenupic" />
+            </div>
+            <div class="description">
+              <h3>Item 1</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>Price : 100</p>
+            </div>
+          </div>
+
+          <div class="menuitem">
+            <div class="circle">
+              <img src="./img/food4.jpeg" alt="" class="foodmenupic" />
+            </div>
+            <div class="description">
+              <h3>Item 1</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>Price : 100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
